@@ -1,0 +1,23 @@
+Purpose of this test
+
+	The purpose of this test is to help define the performance
+	characteristics of target languages in the task of reading,
+	writing, and searching ("does key exist?") in a hashmap.
+
+Method
+
+	A static array (of whatever type is standard for that language)
+	is pre-populated with X strings consisting of Y randomly
+	generated integers (0-9) each. X and Y are specified in the
+	Makefile as TESTSIZE and STRINGSIZE. All languages will use the same
+	list of strings, and will begin execution with the list in
+	memory, so that file I/O is not a consideration.
+
+Measurements
+
+	The execution time for the entire loop will be counted. The
+	benchmark will not begin until the initialization of the loop,
+	and will stop immediately after the last iteration of the loop.
+
+	The tests will produce timing to millisecond precision, fractional
+	milliseconds are not necessary.
