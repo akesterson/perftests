@@ -23,7 +23,7 @@ testcpp_stdstring: testcpp_stdstring.cpp stringlist.h
 testcpp: testcpp.cpp stringlist.h
 	g++ -o testcpp testcpp.cpp
 
-test: testcpp testcpp_stdstring stringlist.py stringlist.sh
+test: testc_glib testcpp testcpp_stdstring stringlist.py stringlist.sh
 	@echo "C (glib, char *)   : " $$(wc -l testc_glib.c) : " " $$(./testc_glib)
 	@echo "C++ (std string)   : " $$(wc -l testcpp_stdstring.cpp) : " " $$(./testcpp_stdstring)
 	@echo "C++ (const char *) : " $$(wc -l testcpp.cpp) : " " $$(./testcpp)
