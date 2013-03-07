@@ -24,7 +24,7 @@ int main(void)
     ftime(&end);
     std::cout << "Over "
 	      << STRINGLISTSIZE
-	      << " elements :"
+	      << " elements : "
 	      << (((end.time * 1000) + end.millitm) - ((start.time * 1000) + start.millitm))
 	      << " milliseconds"
 	      << std::endl;
