@@ -21,3 +21,51 @@ Measurements
 
 	The tests will produce timing to millisecond precision, fractional
 	milliseconds are not necessary.
+
+Results
+
+	The below results were produced on:
+
+	- gcc version 4.7.2 (Ubuntu/Linaro 4.7.2-2ubuntu1)
+	- Python 2.7.3
+	- Node.js v0.6.19
+	- GNU bash, version 4.2.37(1)-release (x86_64-pc-linux-gnu)
+	- Lubuntu (wheezy/sid) x86_64 (Intel P6100 @2ghz) w/ 4gB RAM
+	- Linux ubuntu 3.5.0-23-generic #35-Ubuntu SMP Thu Jan 24 13:15:40 UTC 2013 x86_64 x86_64 x86_64 GNU/Linu
+
+-----------------------------------------------------------------
+
+C (glib, char *) -O0     :  44 testc_glib.c :   Over 20000 elements : 3 milliseconds
+C (Judy, char *) -O0     :  35 testc_judy.c :   Over 20000 elements : 5 milliseconds
+C++ (std string) -O0     :  38 testcpp_stdstring.cpp :   Over 20000 elements : 24 milliseconds
+C++ (std hash_map) -O0   :  39 testcpp_hashmap.cpp :   Over 20000 elements : 15 milliseconds
+C++ (const char *) -O0   :  31 testcpp.cpp :   Over 20000 elements : 15 milliseconds
+Python                   :  15 testpy.py : Over 20000 elements : 7 milliseconds
+JavaScript (Node)        :  15 testpy.py : Over 20000 elements : 7 milliseconds
+Bash                     :  16 testsh.sh : Over 20000 elements : 577 milliseconds
+
+---------------------------------------------------------------
+
+		With C optimizations at -O2
+
+C (glib, char *) -O2     :  44 testc_glib.c :   Over 20000 elements : 3 milliseconds
+C (Judy, char *) -O2     :  35 testc_judy.c :   Over 20000 elements : 6 milliseconds
+C++ (std string) -O2     :  38 testcpp_stdstring.cpp :   Over 20000 elements : 5 milliseconds
+C++ (std hash_map) -O2   :  39 testcpp_hashmap.cpp :   Over 20000 elements : 5 milliseconds
+C++ (const char *) -O2   :  31 testcpp.cpp :   Over 20000 elements : 5 milliseconds
+Python                   :  15 testpy.py : Over 20000 elements : 7 milliseconds
+JavaScript (Node)        :  15 testpy.py : Over 20000 elements : 8 milliseconds
+Bash                     :  16 testsh.sh : Over 20000 elements : 566 milliseconds
+
+-------------------------------------------------------------------------
+
+		With C optimizations at -O3
+
+C (glib, char *) -O3     :  44 testc_glib.c :   Over 20000 elements : 3 milliseconds
+C (Judy, char *) -O3     :  35 testc_judy.c :   Over 20000 elements : 5 milliseconds
+C++ (std string) -O3     :  38 testcpp_stdstring.cpp :   Over 20000 elements : 5 milliseconds
+C++ (std hash_map) -O3   :  39 testcpp_hashmap.cpp :   Over 20000 elements : 5 milliseconds
+C++ (const char *) -O3   :  31 testcpp.cpp :   Over 20000 elements : 5 milliseconds
+Python                   :  15 testpy.py : Over 20000 elements : 7 milliseconds
+JavaScript (Node)        :  15 testpy.py : Over 20000 elements : 7 milliseconds
+Bash                     :  16 testsh.sh : Over 20000 elements : 571 milliseconds
