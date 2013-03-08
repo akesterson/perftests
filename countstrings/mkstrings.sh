@@ -33,6 +33,23 @@ function writepython()
     return 0
 }
 
+function writejs()
+{
+    idx=0
+    echo "var stringlist = [" > stringlist.js
+    for string in ${strings[*]}
+    do
+	if [ $idx -ne 0 ]; then
+	    echo "," >> stringlist.js
+	fi
+	echo -n "        \"$string\"" >> stringlist.js
+	idx=$((idx + 1))
+    done
+    echo "];" >> stringlist.js
+    echo "module.exports.stringlist = stringlist;" >> stringlist.js
+    return 0
+}
+
 function writebash()
 {
     idx=0
@@ -63,3 +80,4 @@ done
 writecpp
 writepython
 writebash
+writejs

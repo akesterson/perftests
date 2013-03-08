@@ -20,6 +20,9 @@ testc_glib: stringlist.h
 testc_judy: stringlist.h testc_judy.c
 	gcc -o testc_judy testc_judy.c -lJudy
 
+testcpp_hashmap: testcpp_hashmap.cpp stringlist.h
+	g++ -o testcpp_stdstring testcpp.cpp
+
 testcpp_stdstring: testcpp_stdstring.cpp stringlist.h
 	g++ -o testcpp_stdstring testcpp.cpp
 
@@ -30,6 +33,8 @@ test: testc_glib testc_judy testcpp testcpp_stdstring stringlist.py stringlist.s
 	@echo "C (glib, char *)   : " $$(wc -l testc_glib.c) : " " $$(./testc_glib)
 	@echo "C (Judy, char *)   : " $$(wc -l testc_judy.c) : " " $$(./testc_judy)
 	@echo "C++ (std string)   : " $$(wc -l testcpp_stdstring.cpp) : " " $$(./testcpp_stdstring)
+	@echo "C++ (std hash_map) : " $$(wc -l testcpp_stdstring.cpp) : " " $$(./testcpp_stdstring)
 	@echo "C++ (const char *) : " $$(wc -l testcpp.cpp) : " " $$(./testcpp)
 	@echo "Python             : " $$(wc -l testpy.py) : $$(python ./testpy.py)
+	@echo "JavaScript (Node)  : " $$(wc -l testpy.py) : $$(python ./testpy.py)
 	@echo "Bash               : " $$(wc -l testsh.sh) : $$(bash ./testsh.sh)
