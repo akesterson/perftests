@@ -41,7 +41,7 @@ C++ (std string) -O0     :  38 testcpp_stdstring.cpp :   Over 20000 elements : 2
 C++ (std hash_map) -O0   :  39 testcpp_hashmap.cpp :   Over 20000 elements : 15 milliseconds
 C++ (const char *) -O0   :  31 testcpp.cpp :   Over 20000 elements : 15 milliseconds
 Python                   :  15 testpy.py : Over 20000 elements : 7 milliseconds
-JavaScript (Node)        :  15 testpy.py : Over 20000 elements : 7 milliseconds
+JavaScript (Node)        :  21 testjs.js : Over 20000 elements : 14 milliseconds
 Bash                     :  16 testsh.sh : Over 20000 elements : 577 milliseconds
 
 ---------------------------------------------------------------
@@ -54,7 +54,7 @@ C++ (std string) -O2     :  38 testcpp_stdstring.cpp :   Over 20000 elements : 5
 C++ (std hash_map) -O2   :  39 testcpp_hashmap.cpp :   Over 20000 elements : 5 milliseconds
 C++ (const char *) -O2   :  31 testcpp.cpp :   Over 20000 elements : 5 milliseconds
 Python                   :  15 testpy.py : Over 20000 elements : 7 milliseconds
-JavaScript (Node)        :  15 testpy.py : Over 20000 elements : 8 milliseconds
+JavaScript (Node)        :  21 testjs.js : Over 20000 elements : 14 milliseconds
 Bash                     :  16 testsh.sh : Over 20000 elements : 566 milliseconds
 
 -------------------------------------------------------------------------
@@ -67,5 +67,5 @@ C++ (std string) -O3     :  38 testcpp_stdstring.cpp :   Over 20000 elements : 5
 C++ (std hash_map) -O3   :  39 testcpp_hashmap.cpp :   Over 20000 elements : 5 milliseconds
 C++ (const char *) -O3   :  31 testcpp.cpp :   Over 20000 elements : 5 milliseconds
 Python                   :  15 testpy.py : Over 20000 elements : 7 milliseconds
-JavaScript (Node)        :  15 testpy.py : Over 20000 elements : 7 milliseconds
+JavaScript (Node)        :  21 testjs.js : Over 20000 elements : 14 milliseconds
 Bash                     :  16 testsh.sh : Over 20000 elements : 571 milliseconds

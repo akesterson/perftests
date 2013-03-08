@@ -1,10 +1,11 @@
-TESTSIZE=19999
+TESTSIZE=20000
 STRINGSIZE=2
 
 GLIB_CFLAGS=$(shell pkg-config --cflags glib-2.0)
 GLIB_LDFLAGS=$(shell pkg-config --libs glib-2.0)
-OPTIMIZE_C=-O0
-OPTIMIZE_CPP=-O0
+OPTIMIZE_C=-O3
+OPTIMIZE_CPP=-O3
+
 clean:
 	rm -f stringlist* testcpp testcpp_stdstring
 
@@ -34,8 +35,8 @@ test: testc_glib testc_judy testcpp testcpp_hashmap testcpp_stdstring stringlist
 	@echo "C (glib, char *) $(OPTIMIZE_C)     : " $$(wc -l testc_glib.c) : " " $$(./testc_glib)
 	@echo "C (Judy, char *) $(OPTIMIZE_C)     : " $$(wc -l testc_judy.c) : " " $$(./testc_judy)
 	@echo "C++ (std string) $(OPTIMIZE_CPP)     : " $$(wc -l testcpp_stdstring.cpp) : " " $$(./testcpp_stdstring)
-	@echo "C++ (std hash_map) $(OPTIMIZE_CPP)  : " $$(wc -l testcpp_hashmap.cpp) : " " $$(./testcpp_stdstring)
-	@echo "C++ (const char *) $(OPTIMIZE_CPP)  : " $$(wc -l testcpp.cpp) : " " $$(./testcpp)
-	@echo "Python              : " $$(wc -l testpy.py) : $$(python ./testpy.py)
-	@echo "JavaScript (Node)   : " $$(wc -l testpy.py) : $$(python ./testpy.py)
-	@echo "Bash             : " $$(wc -l testsh.sh) : $$(bash ./testsh.sh)
+	@echo "C++ (std hash_map) $(OPTIMIZE_CPP)   : " $$(wc -l testcpp_hashmap.cpp) : " " $$(./testcpp_stdstring)
+	@echo "C++ (const char *) $(OPTIMIZE_CPP)   : " $$(wc -l testcpp.cpp) : " " $$(./testcpp)
+	@echo "Python                   : " $$(wc -l testpy.py) : $$(python ./testpy.py)
+	@echo "JavaScript (Node)        : " $$(wc -l testjs.js) : $$(js ./testjs.js)
+	@echo "Bash                     : " $$(wc -l testsh.sh) : $$(bash ./testsh.sh)
