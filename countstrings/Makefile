@@ -33,7 +33,7 @@ test: testc_glib testc_judy testcpp testcpp_stdstring stringlist.py stringlist.s
 	@echo "C (glib, char *)   : " $$(wc -l testc_glib.c) : " " $$(./testc_glib)
 	@echo "C (Judy, char *)   : " $$(wc -l testc_judy.c) : " " $$(./testc_judy)
 	@echo "C++ (std string)   : " $$(wc -l testcpp_stdstring.cpp) : " " $$(./testcpp_stdstring)
-	@echo "C++ (std hash_map) : " $$(wc -l testcpp_stdstring.cpp) : " " $$(./testcpp_stdstring)
+	@echo "C++ (std hash_map) : " $$(wc -l testcpp_hashmap.cpp) : " " $$(./testcpp_stdstring)
 	@echo "C++ (const char *) : " $$(wc -l testcpp.cpp) : " " $$(./testcpp)
 	@echo "Python             : " $$(wc -l testpy.py) : $$(python ./testpy.py)
 	@echo "JavaScript (Node)  : " $$(wc -l testpy.py) : $$(python ./testpy.py)
