@@ -3,11 +3,12 @@
 #include <iostream>
 #include <string>
 #include "stringlist.h"
+#include <unordered_map>
 
 int main(void)
 {
-    std::hash_map<std::string, int> stringcounts;
-    std::hash_map<std::string, int>::iterator iter;
+    std::unordered_map<std::string, int> stringcounts;
+    std::unordered_map<std::string, int>::iterator iter;
     std::string stdstrings[STRINGLISTSIZE];
     const char *cur;
     timeb end;
@@ -20,7 +21,7 @@ int main(void)
 
     ftime(&start);
     for ( int i = 0; i < STRINGLISTSIZE ; i++ ) {
-	cur = stdstrings[i];
+	cur = stringlist[i];
 	iter = stringcounts.find(cur);
 	if ( iter == stringcounts.end() ) {
 	    stringcounts[cur] = 1;
