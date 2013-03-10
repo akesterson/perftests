@@ -22,6 +22,10 @@ Measurements
 	The tests will produce timing to millisecond precision, fractional
 	milliseconds are not necessary.
 
+	The measurements in this README are from a single run; for
+	truly statistically meaningful measurements, the times would
+	need to be averaged across multiple runs.
+
 Results
 
 	The below results were produced on:
@@ -31,7 +35,7 @@ Results
 	- Node.js v0.6.19
 	- GNU bash, version 4.2.37(1)-release (x86_64-pc-linux-gnu)
 	- Lubuntu (wheezy/sid) x86_64 (Intel P6100 @2ghz) w/ 4gB RAM
-	- Linux ubuntu 3.5.0-23-generic #35-Ubuntu SMP Thu Jan 24 13:15:40 UTC 2013 x86_64 x86_64 x86_64 GNU/Linu
+	- Linux ubuntu 3.5.0-23-generic #35-Ubuntu SMP Thu Jan 24 13:15:40 UTC 2013 x86_64 x86_64 x86_64 GNU/Linux
 
 -----------------------------------------------------------------
 
