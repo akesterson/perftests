@@ -14,6 +14,9 @@ Method
 	list of strings, and will begin execution with the list in
 	memory, so that file I/O is not a consideration.
 
+	A hashmap is used to store the occurrence of every unique element
+	in the test list.
+
 Measurements
 	The execution time for the entire loop will be counted. The
 	benchmark will not begin until the initialization of the loop,

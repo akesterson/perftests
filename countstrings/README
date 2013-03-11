@@ -13,6 +13,9 @@ Method
 	list of strings, and will begin execution with the list in
 	memory, so that file I/O is not a consideration.
 
+	A hashmap is used to store the number of occurence of each unique
+	element in the test list.
+
 Measurements
 
 	The execution time for the entire loop will be counted. The
