@@ -2,7 +2,7 @@ Purpose of this test
 
 	The purpose of this test is to help define the performance
 	characteristics of target languages in the task of sorting
-	a list of integers.
+	a list of strings.
 
 Method
 
