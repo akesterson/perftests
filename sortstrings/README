@@ -1,0 +1,57 @@
+Purpose of this test
+
+	The purpose of this test is to help define the performance
+	characteristics of target languages in the task of sorting
+	a list of integers.
+
+Method
+
+	A static array (of whatever type is standard for that language)
+	is pre-populated with X strings consisting of Y digits of randomly
+	generated integers (0-9) each. X and Y are specified in the
+	Makefile as TESTSIZE and STRSIZE. All languages will use the same
+	list of strings, and will begin execution with the list in
+	memory, so that file I/O is not a consideration.
+
+	The list is then sorted in place using whatever facilities are
+	standard for that language. If possible, an implementation of
+	quicksort with string comparison will be preferred.
+
+Measurements
+	The execution time for the sort will be counted. The
+	benchmark will only cover the function call to the quicksort.
+
+	The tests will produce timing to millisecond precision, fractional
+	milliseconds are not necessary.
+
+	The measurements in this README are from a single run; for
+	truly statistically meaningful measurements, the times would
+	need to be averaged across multiple runs.
+
+Results
+
+	The below results were produced on:
+
+	- gcc version 4.7.2 (Ubuntu/Linaro 4.7.2-2ubuntu1)
+	- Python 2.7.3
+	- Node.js v0.6.19
+	- GNU bash, version 4.2.37(1)-release (x86_64-pc-linux-gnu)
+	- Lubuntu (wheezy/sid) x86_64 (Intel P6100 @2ghz) w/ 4gB RAM
+	- Linux ubuntu 3.5.0-23-generic #35-Ubuntu SMP Thu Jan 24 13:15:40 UTC 2013 x86_64 x86_64 x86_64 GNU/Linux
+
+-----------------------------------------------------------------
+
+C -O0                    :  25 testc.c :   Over 20000 elements : 11 milliseconds
+C++ -O0                  :  28 testcpp.cpp :   Over 20000 elements : 10 milliseconds
+Python                   :  10 testpy.py : Over 20000 elements : 7 milliseconds
+JavaScript (Node)        :  13 testjs.js : Over 20000 elements : 12 milliseconds
+Bash                     :  7 testsh.sh : Over 20000 elements : 93 milliseconds
+
+---------------------------------------------------------------
+		With C optimizations at -O2
+
+C -O2                    :  25 testc.c :   Over 20000 elements : 12 milliseconds
+C++ -O2                  :  28 testcpp.cpp :   Over 20000 elements : 5 milliseconds
+Python                   :  10 testpy.py : Over 20000 elements : 6 milliseconds
+JavaScript (Node)        :  13 testjs.js : Over 20000 elements : 11 milliseconds
+Bash                     :  7 testsh.sh : Over 20000 elements : 102 milliseconds
